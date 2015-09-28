@@ -9,22 +9,6 @@ cd /app &&
 
 sleep 1
 
-echo '-----> Installing Bower'
-if [ -f "./node_modules/bower/bin/bower" ]
-then
-  echo 'Bower already installed. Skipping...'
-else
-  npm install bower
-fi
-
-echo '-----> Installing Bower Packages'
-if [ -f "./bower.json" ]
-then
-  ./node_modules/bower/bin/bower install --allow-root
-else
-  echo 'bower.json missing. Nothing to install...'
-fi
-
 echo '-----> Installing gulp'
 if [ -f "./node_modules/gulp/bin/gulp.js" ]
 then
